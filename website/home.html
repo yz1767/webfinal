@@ -132,7 +132,7 @@
                                 <h1>Jigsaw</h1>
                                 <div class="date">May 1 2016</div>
                                 <div class="description">Drag the puzzle piece to the proper place. Finish in 1 minute.</div>
-                                <button><a href="https://gameknot.com/chess-puzzles.pl">Read More</a></button>
+                                <button><a href="sortable-my-Puzzle/sort.html">Read More</a></button>
                             </div>
                         </div>
                         <div class="grid-item medium floatLeft">
@@ -244,12 +244,10 @@
         </section>
     </div>
     <div id="icon-up-down">
-
         <style>
         #icon-go-up {
             z-index: 12;
             position: fixed;
-       
             opacity: 0.7;
             right: 4vw;
             top: 45vh;
@@ -259,7 +257,6 @@
         #icon-go-down {
             z-index: 12;
             position: fixed;
-           
             opacity: 0.7;
             right: 4vw;
             top: 50vh;
@@ -272,30 +269,28 @@
         <div id="icon-go-down">
             <a><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a>
         </div>
+        <script>
+        var currentSlideNumber = 0;
+        var totalSlideNumber = $(".background").length;
 
-<script>
-                    var currentSlideNumber = 0;
-                    var totalSlideNumber = $(".background").length;
-                  
-                    $("#icon-go-down").click(function() {
+        $("#icon-go-down").click(function() {
 
-                        var $currentSlide = $(".background").eq(currentSlideNumber);
-                        $currentSlide.removeClass("up-scroll").addClass("down-scroll");
-                        currentSlideNumber += 1;
-                        return;
+            var $currentSlide = $(".background").eq(currentSlideNumber);
+            $currentSlide.removeClass("up-scroll").addClass("down-scroll");
+            currentSlideNumber += 1;
+            return;
 
 
-                    });
+        });
 
-                     $("#icon-go-up").click(function() {
+        $("#icon-go-up").click(function() {
 
-                        var $currentSlide = $(".background").eq(currentSlideNumber);
-                        $currentSlide.removeClass("down-scroll").addClass("up-scroll");
-                        currentSlideNumber = currentSlideNumber-1;
-                        return;
-                    });
-                 
-                    </script>
+            var $currentSlide = $(".background").eq(currentSlideNumber);
+            $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+            currentSlideNumber = currentSlideNumber - 1;
+            return;
+        });
+        </script>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
     <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
