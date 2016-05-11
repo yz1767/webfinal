@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navhover.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -241,6 +242,60 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div id="icon-up-down">
+
+        <style>
+        #icon-go-up {
+            z-index: 50;
+            position: fixed;
+       
+            opacity: 0.7;
+            right: 4vw;
+            top: 45vh;
+            position: fixed;
+        }
+        
+        #icon-go-down {
+            z-index: 50;
+            position: fixed;
+           
+            opacity: 0.7;
+            right: 4vw;
+            top: 50vh;
+            position: fixed;
+        }
+        </style>
+        <div id="icon-go-up">
+            <a><i class="fa fa-chevron-up fa-3x" aria-hidden="true"></i></a>
+        </div>
+        <div id="icon-go-down">
+            <a><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a>
+        </div>
+
+<script>
+                    var currentSlideNumber = 0;
+                    var totalSlideNumber = $(".background").length;
+                  
+                    $("#icon-go-down").click(function() {
+
+                        var $currentSlide = $(".background").eq(currentSlideNumber);
+                        $currentSlide.removeClass("up-scroll").addClass("down-scroll");
+                        currentSlideNumber += 1;
+                        return;
+
+
+                    });
+
+                     $("#icon-go-up").click(function() {
+
+                        var $currentSlide = $(".background").eq(currentSlideNumber);
+                        $currentSlide.removeClass("down-scroll").addClass("up-scroll");
+                        currentSlideNumber = currentSlideNumber-1;
+                        return;
+                    });
+                 
+                    </script>
     </div>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
     <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
