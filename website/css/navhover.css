@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+.nav{
+  font-family: Montserrat;
+  text-transform: uppercase;
+}
+
+
+#nav-home a:hover {
+    color: #bfbfbf;
+    text-transform: uppercase;
+    text-shadow: 0 0.03em 0.1em #8c8c8c;
+}
+#nav-game a:hover {
+    color: #fcf0ef;
+    text-transform: uppercase;
+    text-shadow: 0 0.03em 0.1em #8c8c8c;
+}
+#nav-design a:hover {
+    color: #e8f7ff;
+    text-transform: uppercase;
+    text-shadow: 0 0.03em 0.1em #8c8c8c;
+}
+#nav-story a:hover {
+    color: #f0ffe8;
+    text-transform: uppercase;
+    text-shadow: 0 0.03em 0.1em #8c8c8c;
+}

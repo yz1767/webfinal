@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puzzle!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navhover.css">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <!--   nav bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">Puzzle!</div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active" id="nav-home">
+                        <a href="home.html">Home<span class="sr-only">(current)</span></a></li>
+                    <li id="nav-game">
+                        <a href="puzzle-game/puzzlegame.html">Puzzle Games</a>
+                    </li>
+                    <li id="nav-design"><a href="">Design Your Own Puzzle</a></li>
+                    <li id="nav-story"><a href="">Story of Puzzles</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- A Pen created at CodePen.io. You can find this one at http://codepen.io/eehayman/pen/qdGZJr.
+
+        A lightweight full page parallax scroll effect. -->
+    <div class="container">
+        <section class="background">
+            <div class="content-wrapper">
+                <link rel="stylesheet" href="css/promo.css">
+                <div class="promo-text">
+                    <h1><br>Puzzle! A Website For All Kinds Of Puzzle Games<br></h1>
+                    <script>
+                    $('h1').each(function() {
+                        var a = $(this).text().split(' ').join('');
+                        $(this).html('');
+
+                        for (var i = 0; i < a.length; i += 1) {
+                            $(this).append($('<span>').text(a[i] + ' '));
+                        }
+                    })
+
+                    var elems = $('span');
+                    for (var i = 0; i < elems.length; i += 1) {
+                        elems[i].style.cssText = 'top: ' + Math.random() * 100 + 'px'
+                    }
+
+                    setTimeout(function() {
+                        $('span').css('top', 0);
+                    }, 100)
+                    </script>
+                    <div id="promo-button">
+                        <a><span>Start!</span></a>
+                    </div>
+                    <script>
+                    var currentSlideNumber = 0;
+                    var totalSlideNumber = $(".background").length;
+                    $("#promo-button").click(function() {
+
+                        var $currentSlide = $(".background").eq(currentSlideNumber);
+                        $currentSlide.addClass("down-scroll");
+
+
+                    });
+                    </script>
+                </div>
+                <div class="promo-background">
+                    <div class="promo-backgrond-left">
+                        <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                    <div class="promo-backgrond-middle">
+                        <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                    <div class="promo-backgrond-right">
+                        <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="background">
+            <div class="content-wrapper">
+                <link rel="stylesheet" href="css/tile.css">
+                <div id="puzzle-game">
+                    <script src="js/tile.js"></script>
+                    <div class="puzzle-game-text">
+                        <h1> <br><br>Puzzle Game <br><br></h1>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-item large floatLeft">
+                            <img src="img/PuzzleGameShow3.png" />
+                            <div class="info hide-info">
+                                <h1>Masyu </h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description"> Masyu is played on a rectangular grid of squares, some of which contain circles; each circle is either "white" (empty) or "black" (filled). The goal is to draw a single continuous non-intersecting loop that properly passes through all circled cells. The loop must "enter" each cell it passes through from the center of one of its four sides and "exit" from a different side; all turns are therefore 90 degrees.</div>
+                                <button><a href="http://www.nikoli.com/en/puzzles/masyu/rule.html">Read More</a></button>
+                            </div>
+                        </div>
+                        <div class="grid-item wide floatLeft">
+                            <img src="img/PuzzleGameShow2.png" />
+                            <div class="info hide-info">
+                                <h1>Minesweeper</h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description">Minesweeper is a single-player game to clear a rectangular board containing hidden "mines" without detonating any of them, with help from clues about the number of neighboring mines in each field. </div>
+                                <button><a href="http://minesweeperonline.com">Read More</a></button>
+                            </div>
+                        </div>
+                        <div class="grid-item medium floatLeft">
+                            <img src="img/PuzzleGameShow1.png" />
+                            <div class="info hide-info">
+                                <h1>Jigsaw</h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description">Drag the puzzle piece to the proper place. Finish in 1 minute.</div>
+                                <button><a href="https://gameknot.com/chess-puzzles.pl">Read More</a></button>
+                            </div>
+                        </div>
+                        <div class="grid-item medium floatLeft">
+                            <img src="img/PuzzleGameShow4.png" />
+                            <div class="info hide-info">
+                                <h1>Sudoku</h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description">Enter numbers into the blank spaces so that each row, column and 3x3 box contains the numbers 1 to 9</div>
+                                <button><a href="http://www.puzzle-sudoku.com">Read More </a> </button>
+                            </div>
+                        </div>
+                        <div class="grid-item medium floatLeft">
+                            <img src="img/PuzzleGameShow5.png" />
+                            <div class="info hide-info">
+                                <h1>Slither Link</h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description"> Draw lines between the dots to form a single loop without crossings or branches.</div>
+                                <button><a href="http://www.puzzle-loop.com">Read More</a></button>
+                            </div>
+                        </div>
+                        <div class="grid-item medium floatLeft">
+                            <img src="img/PuzzleGameShow6.png" />
+                            <div class="info hide-info">
+                                <h1>Tangram</h1>
+                                <div class="date">May 1 2016</div>
+                                <div class="description">The tangram is a dissection puzzle consisting of seven flat shapes, and put them together to form shapes.</div>
+                                <button><a href="http://www.abcya.com/tangrams.htm">Read More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="background">
+            <div class="content-wrapper">
+                <link rel="stylesheet" href="css/story.css">
+                <div id="story-jump">
+                    <div class="story-jump-text">
+                        <h1><br><br>Puzzle Story</h1>
+                    </div>
+                    <div id="story">
+                        <script>
+                        console.clear();
+                        $(function() {
+                            var $g = $(".gallery, .gallery--item");
+                            var $gi = $(".gallery--item");
+                            //*
+                            $g.hover(function(evt) {
+                                $(this).addClass("hover");
+                            }, function(evt) {
+                                $(this).removeClass("hover");
+                            });
+                            //*/
+                            //*
+                            $gi.click(function(evt) {
+                                $(".hover").removeClass("hover");
+                                $(".gallery").addClass("hover");
+                                $(this).addClass("hover");
+                            });
+                            //*/
+                        });
+                        </script>
+                        <ul class="gallery">
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Minesweeper_(video_game)"><img src="img/Story1.png" /></a>
+                                <h3>Minesweeper </h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Tetris"><img src="img/Story2.gif" /></a>
+                                <h3>Tetris</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Spider_(solitaire)"><img src="img/Story3.png" /></a>
+                                <h3>Spider Solitaire</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Lemmings_(video_game)"><img src="img/Story4.jpg" /></a>
+                                <h3>Lemmings</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Sudoku"><img src="img/Story5.png" /></a>
+                                <h3>Sudoku</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Slitherlink"><img src="img/Story6.jpg" /></a>
+                                <h3>Slitherlink</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Jigsaw_puzzle"><img src="img/Story7.jpg" /></a>
+                                <h3>Jigsaw puzzle</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Crossword"><img src="img/Story8.png" /></a>
+                                <h3>Crossword</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Tangram"><img src="img/Story9.png" /></a>
+                                <h3>Tangram</h3>
+                            </li>
+                            <li class="gallery--item">
+                                <a href="https://en.wikipedia.org/wiki/Zuma_(video_game)"><img src="img/Story10.jpg" /></a>
+                                <h3>Zuma</h3>
+                            </li>
+                        </ul>
+                        <script src="js/story.js"></script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js'></script>
+    <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

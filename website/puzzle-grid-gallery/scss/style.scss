@@ -1,0 +1,113 @@
+$gs: 80vmin; //galery size
+$rat: .77632; //puzzle ratio
+$numi: 9; //num items
+$td: .45s; //transition dureation
+$is: $gs/3; //item size
+
+$pcs: $is*.5; //piece size
+$pzs: $pcs/$rat; //puzzle size
+$ptrs: 100% * (1- $rat); //puzzle translate 
+$bgs: 200%*$rat;//puzzle bg size
+
+$ef: cubic-bezier(0.65, 0.05, 0.36, 1); //easing function
+$imgIds: 1011, 1006, 883, 1074, 823, 64, 65, 839, 832;
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow: hidden;
+  background: #fff3e0;
+}
+svg{
+  width: 0;
+  height: 0;
+  display: block;
+}
+.grid{
+  width: $gs;
+  margin: 10vmin auto;
+  display: flex;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  box-shadow: 0px 0px $gs*.1 $gs*.05 rgba(0, 0, 0, .1), inset 0px 0px  $gs*.1 $gs*.05 rgba(0, 0, 0, .1);
+  perspective: 2000;
+}
+.item-box{
+  position: relative;
+  width: $is;
+  height: $is;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: all $td*.5 $ef $td*.5; 
+  @for $i from 0 to $numi{
+    $ii: $i+1;
+    &:nth-child(#{$ii}){
+      $id: nth($imgIds, $ii);
+      .puzzle:before{
+        background-image: url('https://unsplash.it/600/600?image=#{$id}');
+      }
+    }
+  }
+  &:hover{
+    transform: scale(1.25,1.25);
+    box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, .2);
+    .puzzle{
+      transform: translateX(0) translateY(0) translateZ(1px) rotateX(0) rotateY(0) ;
+       opacity: 1;
+    }
+}
+.item-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  }
+}
+.piece{
+  position: absolute;
+  width: $pcs;
+  height: $pcs;
+  transform-style: preserve-3d;
+  @for $i from 0 to 4{
+    $ii: $i+1;
+    $x: cos(90*$i - 135deg)*sqrt(2)*50% - 50%;
+    $y: sin(90*$i - 135deg)*sqrt(2)*50% - 50%;
+    &:nth-child(#{$ii}){
+      transform: translateX($x) translateY($y) rotate(90deg*$i);
+      .puzzle{
+        //transition-delay: $i*.025s;
+        //transition-duration: $td - .13*$i;
+        &:before{
+          background-position: $x + 100% $y + 100%;
+          transform: rotate(-90deg*$i);
+        }
+      }
+    }
+  }
+}
+.puzzle{
+  position: absolute;
+  width: $pzs;
+  height: $pzs;
+  background-color: #000;
+  clip-path: url(#puzzle);
+  opacity: .8;
+  //animation: init $td $ef  .5s;
+  transform: translateX(-$ptrs) translateY(-$ptrs) translateZ(0px) rotateX(.5turn) rotateY(.5turn);
+  transition: all $td $ef;
+  &:before{
+    content: "";
+    position: absolute;
+    width: $pzs;
+    height: $pzs;
+    background-size: $bgs;
+  }
+}
+
+@keyframes init{
+  from{
+    transform: translateX(0) translateY(0) translateZ(1px) rotateX(0) rotateY(0);
+  }
+}

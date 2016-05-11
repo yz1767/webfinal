@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+#story-jump{
+/*    height:40vw;*/
+}
+
+.story-jump-text{
+    top:10vh;
+    text-align: center;
+    color: #f0ffe8;
+    font-size: 3em;
+    font-family: Montserrat;
+  text-transform: uppercase;
+  text-shadow: 0 0.03em 0.1em #8c8c8c;
+   
+}
+.story-jump-text h1{
+    top:10vh;
+
+}
+
+.story-jump-text h1:hover{
+    text-shadow: 0 0.05em 0.1em white;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+
+
+}
+
+#story {
+    top:5vh;
+    bottom: 0vh;
+    position: relative;
+    height: 73vh;
+    background: black;
+    opacity: 0.8;
+}
+
+.gallery {
+    list-style-type: none;
+    margin: 0;
+    bottom: 0;
+    padding: 0;
+    font-size: 0;
+    height: 33%;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    position: absolute;
+}
+
+.gallery--item {
+    box-shadow: -0.2rem 0 1rem 0.25rem rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 10%;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.gallery.hover {
+    height: 75%;
+}
+
+.gallery.hover .gallery--item {
+    width: 5%;
+}
+
+.gallery.hover .gallery--item.hover {
+    padding: 1.5rem;
+    width: 55%;
+    z-index: 1;
+}
+
+.gallery.hover .gallery--item.hover img {
+    height: calc(100% - 3rem);
+    left:0;
+    
+}
+
+.gallery.hover .gallery--item.hover h3 {
+    background-color: transparent;
+    font-size: 3rem;
+    right:0;
+    text-align: right;
+}
+
+.gallery--item {
+    overflow: hidden;
+    background: #262626;
+}
+
+.gallery--item img {
+    position: absolute;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    height: 100%;
+    width: auto;
+    left:0;
+    
+}
+
+.gallery--item h3 {
+    background: #595959;
+    position: absolute;
+    color: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align:initial;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    font-size: 2.5rem;
+    font-weight: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: .25em .5em 0 auto;
+    text-align: right;
+     text-shadow: 0 0.05em 0.1em white;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}

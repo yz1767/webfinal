@@ -1,0 +1,210 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+#puzzle-game {
+    width:100vw;
+    margin-top: 5px;
+    border: 0;
+    padding: 0;
+    position: relative;
+    padding-color:black;
+}
+
+.puzzle-game-text {
+     font-size: 3em;
+    text-align: center;
+    color: #fcf0ef;
+     font-family: Montserrat;
+  text-transform: uppercase;
+  text-shadow: 0 0.03em 0.1em #8c8c8c;
+}
+
+
+
+.puzzle-game-text h1:hover{
+    text-shadow: 0 0.05em 0.1em white;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.grid-container {
+    padding-top: 3px;
+    padding-bottom:3px;
+    padding-left:10%;
+    padding-right:10%;
+    width: 100%;
+/*    max-width: 1920px;*/
+    margin: 0 0 0 0;
+  /*  height: auto;*/
+    overflow: hidden;
+    background: black;
+
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0.2%;
+    height: 0px;
+}
+
+.grid-item:hover {
+    transform: scale(0.97);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-out;
+    cursor: pointer;
+}
+
+.grid-item:active {
+    transform: scale(0.93);
+    cursor: pointer;
+}
+
+
+.medium {
+    width: 19.6%;
+    padding-bottom: 19.6%;
+}
+
+.wide {
+    width: 39.6%;
+    padding-bottom: 19.6%;
+}
+
+.large {
+    width: 39.6%;
+    padding-bottom: 39.55%;
+}
+
+.grid-item img {
+    overflow: hidden;
+    width: 105%;
+}
+
+.grid-item .info {
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(15, 15, 15, 0.8);
+    color: white;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    width: 100%;
+    font-size: 100%;
+    transition: all 0.25s ease-in-out;
+}
+
+.grid-item .show-info {
+    height: 100%;
+}
+.grid-item .show-info h1{
+font-size: 20px;
+}
+.grid-item .show-info .description{
+    font-size: 14px;
+    font-family:sans-serif;
+
+}
+.grid-item .hide-info {
+    height: 30%;
+    max-height: 60px;
+}
+
+.grid-item h1 {
+    margin-top: 1px;
+    font-size: 30px;
+    padding: 2%;
+}
+
+.grid-item .date {
+    padding: 2%;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+.grid-item .description {
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 2%;
+    font-family: Montserrat;
+   text-transform: none;
+}
+
+.grid-item button {
+    border: solid 1px;
+    border-color: white;
+    visibility: collapse;
+    text-align: center;
+    background: black;
+    color: #fcf0ef;
+    position: absolute;
+    text-decoration: none;
+    border: none;
+    left: 50%;
+    right: 50%;
+    bottom: 25px;
+    margin: -20px -50px;
+    width: 100px;
+    height: 30px;
+    transition: background-color 0.1s;
+    transition: height 0.1s;
+}
+
+.grid-item button:hover {
+    border: solid 2px;
+    border-color: #bfbfbf;
+    background: #fcf0ef;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.grid-item button:active {
+    background-color: rgba(20, 20, 20, 100);
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.grid-item button a {
+    text-decoration: none;
+    color: #fcf0ef;
+}
+
+.grid-item button a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+@media all and (max-width:680px) {
+    .medium {
+        width: 99.3%;
+        padding-bottom: 49.3%;
+        margin-bottom: 1%;
+    }
+    .wide {
+        width: 99.3%;
+        padding-bottom: 49.3%;
+        margin-bottom: 1%;
+    }
+    .large {
+        width: 99.3%;
+        padding-bottom: 49.3%;
+        margin-bottom: 1%;
+    }
+}
+
+.info.hide-info h1{
+    font-size: 1.4em;
+    font-family: Montserrat;
+    font-weight:100; 
+    color: #fcf0ef;
+    text-shadow: 0 0.03em 0.1em #8c8c8c;
+
+}
+

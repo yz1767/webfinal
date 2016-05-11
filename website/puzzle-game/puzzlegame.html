@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Puzzle Games</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="../css/navhover.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+
+
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bimboo.com.br/layout/wookmark/2.1.0/wookmark.min.js"></script>
+    <link rel="stylesheet" href="css/puzzlegame.css">
+
+    <script src="https://use.fontawesome.com/9918cda2d4.js"></script>
+
+
+</head>
+<style>
+body {
+    background: black;
+}
+</style>
+
+<body>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <!--   nav bar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">Puzzle!</div>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="nav-home">
+                        <a href="../home.html">Home</a></li>
+                    <li class="active" id="nav-game">
+                        <a href="puzzlegame.html">Puzzle Games<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li id="nav-design"><a href="#">Design Your Own Puzzle</a></li>
+                    <li id="nav-story"><a href="#story-jump">Story of Puzzles</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<style>
+#icon-up{
+    z-index: 50;
+    position: fixed;
+    color:white;
+    opacity: 0.5;
+    right:4vw;
+    top:90vh;
+    position: fixed;
+
+}
+    
+</style>
+<a id="icon-up" href="#filters">
+    
+
+<i class="fa fa-chevron-circle-up fa-3x" aria-hidden="true"></i>
+</a>
+
+
+    <div id="puzzlegame-gallery">
+        
+   
+    <ul id="filters">
+        <li data-filter="logic">Logic</li>
+        <li data-filter="Jigsaw">Jigsaw</li>
+        <li data-filter="Crossword">Crossword</li>
+    </ul>
+    <ul id="gallery-show" class="tiles-wrap animated">
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Bridge.gif">
+                <img src="img/galleryshowlogic12.png">
+                <div>
+                    <div>
+                        <span>Bridges</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw7-2.png">
+                <img src="img/galleryshowjigsaw7-1.png">
+                
+                <div>
+                    <div>
+                        <span>My Jquery Puzzle Game</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Dominosa.gif">
+                <img src="img/galleryshowlogic8.png">
+                <div>
+                    <div>
+                        <span>Dominosa</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["crossword"]'>
+            <a target="_blank" href="img/galleryshowcrossword2.png">
+                <img src="img/galleryshowcrossword2.png">
+                <!-- http://www.uclick.com/client/bos/fcx/ -->
+                <div>
+                    <div>
+                        <span>Medium</span>
+                        <span>crossword</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw4-2.png">
+                <img src="img/galleryshowjigsaw4-1.png">
+                <!-- http://www.jigsawplanet.com/?rc=play&pid=1e43444c36a4 -->
+                <div>
+                    <div>
+                        <span>A couple of kids</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Snail.gif">
+                <img src="img/galleryshowlogic4.png">
+                <div>
+                    <div>
+                        <span>Snail</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Masyu.gif">
+                <img src="img/galleryshowlogic1.png">
+                <div>
+                    <div>
+                        <span>Masyu</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Shikaku.gif">
+                <img src="img/galleryshowlogic9.png">
+                <div>
+                    <div>
+                        <span>Shikaku</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Sudoku.gif">
+                <img src="img/galleryshowlogic6.png">
+                <div>
+                    <div>
+                        <span>Sudoku</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/LightUp.gif">
+                <img src="img/galleryshowlogic5.png">
+                <div>
+                    <div>
+                        <span>Light Up</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/SlitherLink.gif">
+                <img src="img/galleryshowlogic7.png">
+                <div>
+                    <div>
+                        <span>Slither Link</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/nonogram.gif">
+                <img src="img/galleryshowlogic11.png">
+                <div>
+                    <div>
+                        <span>Nonograms</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/ZebraPuzzle.gif">
+                <img src="img/galleryshowlogic2.png">
+                <div>
+                    <div>
+                        <span>Zebra Puzzle</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/LogicMaze.gif">
+                <img src="img/galleryshowlogic10.png">
+                <div>
+                    <div>
+                        <span>Logic maze</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw1.png">
+                <img src="img/galleryshowjigsaw1.png">
+                <!-- http://www.jigsawplanet.com/?rc=play&pid=164bda6557fa -->
+                <div>
+                    <div>
+                        <span>Argentina Patagonia Tour Perito Moreno Glacier</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw2-2.png">
+                <img src="img/galleryshowjigsaw2-1.png">
+                <div>
+                    <div>
+                        <!-- http://www.jigsawplanet.com/?rc=play&pid=0f1d898263be -->
+                        <span>Aztec Ruins</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw3-2.png">
+                <img src="img/galleryshowjigsaw3-1.png">
+                <!-- http://www.jigsawplanet.com/?rc=play&pid=2a49d53289d6 -->
+                <div>
+                    <div>
+                        <span>Thread Basket</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["crossword"]'>
+            <a target="_blank" href="img/galleryshowcrossword4-1.png">
+                <img src="img/galleryshowcrossword4-1.png">
+                <!-- http://www.wordplays.com/crossword-solver -->
+                <div>
+                    <div>
+                        <span>CROSSWORD SOLVER</span>
+                        <span>crossword</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw5-2.png">
+                <img src="img/galleryshowjigsaw5-2.png">
+                <!--  http://www.jigsawplanet.com/?rc=play&pid=0114473f55f2 -->
+                <div>
+                    <div>
+                        <span> Yoho National Park Canada</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["jigsaw"]'>
+            <a target="_blank" href="img/galleryshowjigsaw6-2.png">
+                <img src="img/galleryshowjigsaw6-1.png">
+                <!-- http://www.jigsawplanet.com/?rc=play&pid=1155e9f55a21 -->
+                <div>
+                    <div>
+                        <span>New York City</span>
+                        <span>jigsaw</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["crossword"]'>
+            <a target="_blank" href="img/galleryshowcrossword1-2.png">
+                <img src="img/galleryshowcrossword1-1.png">
+                <!-- https://www.boatloadpuzzles.com/playcrossword -->
+                <div>
+                    <div>
+                        <span>Small</span>
+                        <span>crossword</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["crossword"]'>
+            <a target="_blank" href="img/galleryshowcrossword3.png">
+                <img src="img/galleryshowcrossword3.png">
+                <!-- http://www.dictionary.com/fun/crossword -->
+                <div>
+                    <div>
+                        <span>Medium Food Fight</span>
+                        <span>crossword</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li data-filter-class='["logic"]'>
+            <a target="_blank" href="img/Nurikabe.gif">
+                <img src="img/galleryshowlogic3.png">
+                <div>
+                    <div>
+                        <span>Nurikabe</span>
+                        <span>logic</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    <script src="js/puzzlegame.js"></script>
+    </div>
+</body>
+
+</html>

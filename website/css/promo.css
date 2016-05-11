@@ -1,0 +1,223 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+.promo {
+/*    widows: 100%;*/
+    overflow: hidden;
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+    padding: 0 0 0 0;
+    background: black;
+    text-align: center;
+}
+
+.promo-text {
+  /*  z-index: 1;*/
+    width: 100%;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 48vh;
+    z-index: 20;
+    font-size: 2em;
+    font-family: Montserrat;
+}
+
+span {
+    -webkit-transition: top 10s linear;
+    -moz-transition: top 10s linear;
+    -ms-transition: top 10s linear;
+    -o-transition: top 10s linear;
+    transition: top 3s linear;
+    position: relative;
+}
+
+#promo-button {
+    width: 100%;
+    z-index: 20;
+    top: 23vh;
+    position: absolute;
+}
+
+#promo-button a {
+    display: block;
+    width: 220px;
+    height: 70px;
+    background: black;
+}
+
+#promo-button a:after {
+    content: '';
+    background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+    background-size: 400% 400%;
+    -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+    -moz-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+    -webkit-animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+    animation: gradient 3s ease-in-out infinite, border 1s forwards ease-in-out reverse;
+}
+
+#promo-button a > span {
+    display: block;
+    background: linear-gradient(120deg, #6559ae, #ff7159, #6559ae);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-animation: gradient 3s ease-in-out infinite;
+    -webkit-animation: gradient 3s ease-in-out infinite;
+    animation: gradient 3s ease-in-out infinite;
+}
+
+
+/* helpers */
+
+.promo:after,
+#promo-button a,
+#promo-button a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.text-formatting,
+#promo-button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 70px;
+    font-size: 20px;
+}
+
+
+/* motion */
+
+@-moz-keyframes gradient {
+    0% {
+        background-position: 14% 0%;
+    }
+    50% {
+        background-position: 87% 100%;
+    }
+    100% {
+        background-position: 14% 0%;
+    }
+}
+
+@-webkit-keyframes gradient {
+    0% {
+        background-position: 14% 0%;
+    }
+    50% {
+        background-position: 87% 100%;
+    }
+    100% {
+        background-position: 14% 0%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 14% 0%;
+    }
+    50% {
+        background-position: 87% 100%;
+    }
+    100% {
+        background-position: 14% 0%;
+    }
+}
+
+@-moz-keyframes border {
+    0% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    25% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+    }
+    75% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+    }
+    100% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+    }
+}
+
+@-webkit-keyframes border {
+    0% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    25% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+    }
+    75% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+    }
+    100% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+    }
+}
+
+@keyframes border {
+    0% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 4px 66px, 4px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    25% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 66px, 216px 66px, 216px 100%, 100% 100%, 100% 0%, 0% 0%);
+    }
+    50% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 216px 4px, 100% 0%, 0% 0%);
+    }
+    75% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 4px, 4px 0%, 0% 0%);
+    }
+    100% {
+        -webkit-clip-path: polygon(0% 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 4px 100%, 0% 100%);
+    }
+}
+
+.promo-background {
+   /* height: 80vw;*/
+    margin: 0 0 0 0;
+    border: 0 0 0 0;
+    padding: 0 0 0 0;
+    left: -3vw;
+    position: relative;
+    top:-15vw;
+    z-index: 17
+}
+
+.promo-backgrond-left {
+   /* top: 50px;*/
+    left: 0%;
+    position: absolute;
+    width: 33.3%;
+}
+
+.promo-backgrond-middle {
+    /*top: 50px;*/
+    left: 31.5%;
+    width: 33.3%;
+    position: absolute;
+}
+
+.promo-backgrond-right {
+    /*top: 50px;*/
+    left: 63%;
+    width: 33.3%;
+    position: absolute;
+}
+
+#promo-img img {
+    padding-top: 10px;
+    margin: 5 5 0 0;
+    position: relative;
+    float: right;
+    width: 100%;
+}

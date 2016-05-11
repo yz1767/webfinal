@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Sortable - Display as grid</title>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+    body {
+        width: 800px;
+    }
+    
+    #sortable {
+        list-style-type: none;
+        margin: 0;
+        padding: 10px;
+        width: 650px;
+        float: left
+    }
+    
+    #sortable li {
+        margin: 3px 3px 3px 0;
+        padding: 1px;
+        float: left;
+        width: 200px;
+        height: 200px;
+        font-size: 4em;
+        text-align: center;
+    }
+    
+    .btn {
+        float: left;
+        width: 100px;
+        height: 30px;
+        line-height: 25px;
+        background: #337AB7;
+        color: #fff;
+    }
+    
+    #timer {
+        float: left;
+        border: 1px solid #ccc;
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center
+    }
+    </style>
+
+    <script>
+    time = 0;
+    timer = null;
+    sort = null;
+    $(function() {
+        initStr = "123456789";
+        initPuzzle();
+    });
+
+    function getStr() {
+        var str = "";
+        $("#sortable li").each(function() {
+            str += $(this).attr('data');
+        });
+        console.log(str);
+        return str;
+    }
+
+    function getRandomArray() {
+        var arr = [];
+        for (var i = 0; i < 9; i++) {
+            arr[i] = i + 1;
+        }
+        arr.sort(function() {
+            return 0.5 - Math.random()
+        })
+        return arr;
+    }
+
+    function initPuzzle() {
+        $("#sortable").empty();
+        var arr = getRandomArray();
+        for (x in arr) {
+            $("#sortable").append("<li class=\"ui-state-default\" data=\"" + arr[x] + "\"><img src=\"img/" + arr[x] + ".jpg\"></li>");
+        }
+        window.clearInterval(timer);
+        time = 60; //set time;
+        settime();
+        timer = setInterval(function() {
+            settime()
+        }, 1000);
+        $("#sortable").sortable({
+            containment: "parent",
+            cursor: "move",
+            revert: true,
+            update: function(event, ui) {
+                if (initStr == getStr()) {
+                    alert("Success!");
+                    window.clearInterval(timer);
+                    $("#timer").text('Success!');
+                    $("#sortable").sortable('disable');
+                }
+            }
+        });
+        $("#sortable").disableSelection();
+        $("#sortable").sortable('enable')
+    }
+
+
+
+    function settime() {
+        if (time == 0) {
+            alert('Time out!');
+            window.clearInterval(timer);
+            $("#timer").text('Time out!');
+            $("#sortable").sortable('disable')
+            return;
+        }
+        var date = new Date(time * 1000);
+        $("#timer").text(date.getMinutes() + ":" + date.getSeconds());
+        time--;
+    }
+    </script>
+</head>
+
+
+<body>
+    <ul id="sortable"></ul>
+    <p id="timer"></p>
+    <button class="btn" onclick="initPuzzle();">Reset</button>
+</body>
+
+</html>
